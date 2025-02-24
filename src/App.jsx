@@ -41,9 +41,9 @@ const AppLayout = () => {
     <div className="app-wrapper min-vh-100 d-flex flex-column">
       <ScrollToTop />
       <Navbar />
-      <main className="flex-grow-1">
-        <Container fluid className="px-0">
-          <Suspense fallback={null}>
+      <Suspense fallback={null}>
+        <main className="flex-grow-1">
+          <Container fluid className="px-0">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -52,10 +52,10 @@ const AppLayout = () => {
               <Route path="/donate" element={<Donate />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
-          </Suspense>
-        </Container>
-      </main>
-      <Footer />
+          </Container>
+        </main>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
