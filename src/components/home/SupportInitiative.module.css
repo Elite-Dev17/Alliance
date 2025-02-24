@@ -1,0 +1,150 @@
+/* General Section Styling */
+:root {
+  --primary-color: #2563eb;
+  --dark-bg: #14212b;
+  --text-color: #333;
+  --white: #fff;
+  --transition: all 0.3s ease;
+}
+
+.support {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    background-color: #F2F8FC;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  /* Image Styling */
+  .imageContainer {
+    flex: 1;
+    min-width: 50%;
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    min-width: 50%;
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    height: 490px; /* Increased height for a larger image */
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Text Content Styling */
+  .textContent {
+    flex: 1;
+    min-width: 50%;
+    padding: 0 40px;
+  }
+  
+  .textContent h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .textContent p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 800px;
+    
+  }
+  
+  /* Support Options */
+  .supportOptions {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .supportOptions div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .supportOptions div:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  /* Buttons */
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .btnPrimary, .btnSecondary {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btnPrimary {
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-right: 15px;
+  }
+  
+  .btnPrimary:hover {
+    background-color: transparent;
+    color: black;
+    border: 2px solid var(--primary-color);
+    transition: ease-in-out 0.1s;
+  }
+  
+  .btnSecondary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .btnSecondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .imageContainer, .textContent {
+      min-width: 100%;
+      padding: 20px;
+    }
+    .imageContainer img {
+      height: 350px; /* Adjusted height for mobile screens */
+    }
+    .supportOptions {
+      flex-direction: column;
+    }
+  }

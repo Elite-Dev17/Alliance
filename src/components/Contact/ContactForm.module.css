@@ -1,0 +1,104 @@
+:root {
+  --primary-color: #2563eb;
+  --dark-bg: #14212b;
+  --text-color: #333;
+  --white: #fff;
+  --transition: all 0.3s ease;
+}
+
+.wrapper {
+    padding: 40px 0;
+    width: 100%;
+  }
+  
+  .contentContainer {
+    display: flex;
+    gap: 30px;
+    min-height: 500px; /* Set a consistent container height */
+  }
+  
+  .formSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mapSection {
+    flex: 1;
+    height: auto; /* Let it fill the container height */
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    height: 45px; /* Consistent height for inputs */
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-size: 16px;
+    height: 150px; /* Fixed height for textarea */
+    resize: none; /* Prevent resize to maintain consistent height */
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  .textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .submitButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    text-transform: uppercase;
+  }
+  
+  .submitButton:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .map {
+    width: 100%;
+    height: 100%; /* Fill the entire mapSection */
+    border: none;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .contentContainer {
+      flex-direction: column;
+      min-height: auto;
+    }
+  
+    .mapSection {
+      height: 400px;
+    }
+  }

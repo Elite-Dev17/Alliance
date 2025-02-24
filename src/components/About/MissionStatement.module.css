@@ -1,0 +1,119 @@
+.missionSection {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.missionContent {
+  text-align: center;
+}
+
+.headingWrapper {
+  margin-bottom: 2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #666 !important;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.mainHeading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.separator {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb 0%, #2563eb 100%);
+  margin: 0 auto 1rem;
+  border-radius: 2px;
+}
+
+.missionText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.focusAreasContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.focusArea {
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 60px;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.focusTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .missionSection {
+    padding: 40px 0;
+  }
+
+  .mainHeading {
+    font-size: 1.7rem;
+  }
+
+  .missionText {
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .focusAreasContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .focusArea {
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width:480px){
+  .mainHeading {
+    font-size: 1.4rem;
+  }
+}

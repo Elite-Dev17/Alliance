@@ -1,0 +1,418 @@
+/* Global Styles */
+:root {
+  --primary-color: #2563eb;
+  --dark-bg: #14212b;
+  --text-color: #333;
+  --white: #fff;
+  --transition: all 0.3s ease;
+}
+
+.navWrapper {
+  width: 100%;
+}
+.fixedNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white; /* Change as needed */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s ease-in-out;
+}
+
+
+/* Top Bar Styles */
+.topBar {
+  background-color: var(--dark-bg);
+  color: var(--white);
+  padding: 10px 0;
+  font-size: 14px;
+  
+}
+
+.topBarLeft {
+  display: none;
+}
+
+.topBarCenter {
+  display: flex;
+  gap: 20px;
+}
+
+.topBarInfo {
+  color: var(--white);
+  margin-right: 20px;
+}
+
+.topBarInfo svg {
+  margin-right: 5px;
+}
+
+.topBarRight {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.socialIcon {
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.socialIcon:hover {
+  color: var(--primary-color);
+}
+
+/* Main Navigation Styles */
+.mainNav {
+  background-color: var(--white);
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.logo {
+  height: 65px;
+  margin-right: 17px;
+}
+
+@media (max-width:768px){
+  .logo {
+    height: 50px;
+    margin-left: 25px;
+  }
+}
+
+/* Navigation Items */
+.navItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 
+  By default, hide .dropdownContent for BOTH desktop & mobile.
+  We'll reveal it on desktop hover & mobile 'active' class.
+*/
+.dropdownContent {
+  display: none;
+}
+
+.navLink {
+  color: var(--text-color) !important;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.navLink:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Desktop Dropdown Styles */
+@media (min-width: 992px) {
+  /* Hide the plus icon on desktop */
+  .plusIcon {
+    display: none;
+  }
+
+  /* Show a downward arrow (▾) for desktop dropdowns */
+  .navLink {
+    padding-right: 24px !important;
+  }
+
+  .navItem .navLink::after {
+    content: '▾';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    color: var(--primary-color);
+  }
+
+  /* Rotate arrow on hover */
+  .navItem:hover .navLink::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  /* Hover-based dropdown reveal on desktop */
+  .dropdownContent {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navItem:hover .dropdownContent {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdownItem {
+    display: block;
+    padding: 10px 15px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .dropdownItem:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--primary-color);
+  }
+}
+
+/* Right Side Navigation */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.searchBtn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  transition: var(--transition);
+}
+
+.searchBtn:hover {
+  color: var(--primary-color);
+}
+
+.cartBtn {
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+  padding: 8px;
+  transition: var(--transition);
+}
+
+.cartBtn:hover {
+  color: var(--primary-color);
+}
+
+
+.donateBtn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.donateBtn:hover {
+  background-color: #e64a2e;
+  color: var(--white);
+}
+
+/* Mobile Styles (<992px) */
+@media (max-width: 991.98px) {
+  .topBarCenter {
+    display: none;
+  }
+
+  .menuToggle,
+  .closeBtn {
+    border: none;
+    background: none;
+    font-size: 24px;
+    padding: 10px;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+  /* 
+    Slide-in from left effect 
+    -> transformX(-100%) hidden, transformX(0) shown
+  */
+  .navCollapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--white);
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navCollapse.show {
+    transform: translateX(0);
+  }
+
+  .mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .navItem {
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Show the plus icon on mobile */
+  .plusIcon {
+    font-size: 20px;
+    color: var(--primary-color);
+  }
+
+  /* 
+    Hide dropdown content by default 
+    => Now handled by .navItem.active .dropdownContent 
+  */
+  .dropdownContent {
+    padding-left: 20px;
+  }
+
+  .dropdownItem {
+    display: block;
+    padding: 10px 0;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  /* Reveal dropdown if .navItem has .active class */
+  .navItem.active .dropdownContent {
+    display: block !important;
+  }
+
+  .mobileSearch {
+    margin-top: 20px;
+    padding: 20px 0;
+    position: relative;
+    border-top: 1px solid #eee;
+  }
+
+  .searchInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+  }
+
+  .searchSubmit {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 15px;
+    background: var(--primary-color);
+    border: none;
+    color: var(--white);
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+/* Extra Mobile Breakpoint */
+@media (max-width: 768px) {
+  .topBarLeft {
+    display: none;
+  }
+
+  .topBarRight {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Fix for large screens: reset mobile navCollapse styles */
+@media (min-width: 992px) {
+  .navCollapse {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    display: flex !important;
+    flex-direction: row !important;
+  }
+}
+
+/* Add these to your existing mobile media query section */
+@media (max-width: 991.98px) {
+  /* Reduce space in mobile header */
+  .mobileHeader {
+    margin-bottom: 15px !important; /* Reduced from 30px */
+    padding-bottom: 10px !important; /* Reduced from 20px */
+  }
+
+  /* Hide desktop-specific elements on mobile */
+  .navRight {
+    display: none !important;
+  }
+
+  /* Adjust mobile menu positioning */
+  .navCollapse {
+    padding-top: 15px !important;
+  }
+
+  /* Reduce spacing between nav items */
+  .navItem {
+    padding: 8px 0 !important; /* Reduced padding */
+  }
+
+  /* Make mobile search more compact */
+  .mobileSearch {
+    margin-top: 15px !important;
+    padding: 10px 0 !important;
+  }
+
+  /* Adjust logo size in mobile header */
+  .mobileHeader .logo {
+    height: 55px !important; /* Reduced from 40px */
+  }
+
+  /* Better spacing for mobile navigation links */
+  .navLink {
+    padding: 10px 0 !important;
+  }
+}
+
+/* Optional: Add this if you want to hide the mobile search toggle button */
+@media (max-width: 991.98px) {
+  .searchBtn.d-lg-none {
+    display: none !important;
+  }
+}

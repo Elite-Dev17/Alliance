@@ -1,0 +1,136 @@
+/* Modern and Cool Vision Section Styles */
+
+.visionSection {
+    background: linear-gradient(to right, #004aad, #00aaff);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.visionContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.headingWrapper {
+    margin-bottom: 50px;
+}
+
+.subheading {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffdd44;
+}
+
+.mainHeading {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.separator {
+    height: 4px;
+    width: 80px;
+    background: #ffdd44;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+.visionPointsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.visionPoint {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.visionPoint:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.iconWrapper {
+    font-size: 42px;
+    color: #ffdd44;
+    margin-bottom: 15px;
+}
+
+.visionTitle {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.visionText {
+    font-size: 17px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Buttons Styling */
+.visionButton {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    position: relative;
+    overflow: hidden;
+}
+
+.visionButton:hover {
+    background: linear-gradient(45deg, #f9d423, #ff4e50);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 78, 80, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .visionPointsContainer {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+    .mainHeading {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .visionPointsContainer {
+        grid-template-columns: 1fr;
+    }
+    .visionPoint {
+        margin: 15px;
+    }
+    .mainHeading {
+        font-size: 32px;
+    }
+    .visionButton {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

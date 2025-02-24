@@ -1,0 +1,155 @@
+.footer {
+    background-color: #1a237e;
+    color: #fff;
+    padding: 4rem 0 2rem;
+    margin-top: auto;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .motto {
+    font-style: italic;
+    color: #90caf9;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #90caf9;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .social {
+    display: flex;
+    gap: 1.2rem;
+  }
+  
+  .socialLink {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .socialLink:hover {
+    color: #90caf9;
+    transform: translateY(-3px);
+  }
+  
+  .linksList {
+    list-style: none;
+    font-size: 0.86rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .linksList li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .linksList a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+  }
+  
+  .linksList a:hover {
+    color: #90caf9;
+    padding-left: 5px;
+  }
+  
+  .newsletterText {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .newsletterForm {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .newsletterInput {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.5rem 1rem;
+  }
+  
+  .newsletterInput::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .newsletterInput:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #90caf9;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  .newsletterButton {
+    background: #90caf9;
+    border: none;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .newsletterButton:hover {
+    background: #64b5f6;
+    transform: translateX(3px);
+  }
+  
+  .contactInfo {
+    margin-top: 1.5rem;
+  }
+  
+  .contactInfo p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .icon {
+    color: #90caf9;
+  }
+  
+  .bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 3rem 0 1.5rem;
+    }
+    
+    .title {
+      font-size: 1.2rem;
+    }
+    .subtitle{
+        font-size: 0.86rem;
+    }
+    .socialLink {
+        font-size: 1.3rem;
+      }
+    
+    .newsletterForm {
+      flex-direction: column;
+    }
+    
+    .newsletterButton {
+      width: 100%;
+    }
+  }

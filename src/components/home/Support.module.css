@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #2563eb;
+    --dark-bg: #14212b;
+    --text-color: #333;
+    --white: #fff;
+    --transition: all 0.3s ease;
+  }
+
+.supportSection {
+    padding: 80px 0;
+    background-color: #F2F8FC;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.supportContent {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.headingWrapper {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.mainHeading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.mainDescription {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.cardsContainer {
+    margin: -15px;
+}
+
+.cardCol {
+    padding: 15px;
+}
+
+.supportCard {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.supportCard:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #f1f1f1;
+}
+
+.iconWrapper {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.iconWrapper:hover {
+    transform: rotate(360deg);
+    background: var(--primary-color);
+}
+
+.icon {
+    font-size: 24px;
+    color: white;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.cardDescription {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .cardCol {
+        padding: 10px;
+    }
+    
+    .cardsContainer {
+        margin: -10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .supportSection {
+        padding: 50px 20px;
+    }
+    
+    .mainHeading {
+        font-size: 2rem;
+    }
+    
+    .supportCard {
+        padding: 20px;
+    }
+    
+    .iconWrapper {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .icon {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mainHeading {
+        font-size: 1.8rem;
+    }
+    
+    .mainDescription {
+        font-size: 1.1rem;
+    }
+    
+    .cardTitle {
+        font-size: 1.3rem;
+    }
+}
